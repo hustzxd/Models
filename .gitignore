@@ -102,3 +102,4 @@ ENV/
 
 # caffemodel
 *.caffemodel
+*.weights
