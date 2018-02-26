@@ -7,7 +7,7 @@ layer {
 }
 layer {
   name: "conv1"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "data"
   top: "conv1"
   convolution_param {
@@ -16,6 +16,18 @@ layer {
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:5
+    fl:3
+  }
+  qcodeconfig {
+    il: 1
+    fl: 7
+  }
+  qcodeconfig {
+    il: 5
+    fl: 3
   }
 }
 layer {
@@ -40,7 +52,7 @@ layer {
 }
 layer{
   name: "conv2"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "pool1"
   top: "conv2"
   convolution_param {
@@ -49,6 +61,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 5
+    fl: 3
+  }
+  qcodeconfig {
+    il: 5
+    fl: 3
   }
 }
 layer {
@@ -74,7 +98,7 @@ layer {
 
 layer{
   name: "conv3"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "pool2"
   top: "conv3"
   convolution_param {
@@ -83,6 +107,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 5
+    fl: 3
+  }
+  qcodeconfig {
+    il: 5
+    fl: 3
   }
 }
 layer {
@@ -98,7 +134,7 @@ layer {
 
 layer{
   name: "conv4"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv3"
   top: "conv4"
   convolution_param {
@@ -107,6 +143,18 @@ layer{
     pad: 0 #??
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:2
+    fl:6
+  }
+  qcodeconfig {
+    il: 5
+    fl: 3
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
   }
 }
 layer {
@@ -121,7 +169,7 @@ layer {
 
 layer{
   name: "conv5"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv4"
   top: "conv5"
   convolution_param {
@@ -130,6 +178,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
   }
 }
 layer {
@@ -155,7 +215,7 @@ layer {
 
 layer{
   name: "conv6"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "pool5"
   top: "conv6"
   convolution_param {
@@ -164,6 +224,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
   }
 }
 layer {
@@ -178,7 +250,7 @@ layer {
 
 layer{
   name: "conv7"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv6"
   top: "conv7"
   convolution_param {
@@ -187,6 +259,18 @@ layer{
     pad: 0
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:2
+    fl:6
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
   }
 }
 layer {
@@ -201,7 +285,7 @@ layer {
 
 layer{
   name: "conv8"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv7"
   top: "conv8"
   convolution_param {
@@ -210,6 +294,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -235,7 +331,7 @@ layer {
 
 layer{
   name: "conv9"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "pool8"
   top: "conv9"
   convolution_param {
@@ -244,6 +340,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -258,7 +366,7 @@ layer {
 
 layer{
   name: "conv10"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv9"
   top: "conv10"
   convolution_param {
@@ -267,6 +375,18 @@ layer{
     pad: 0
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:2
+    fl:6
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -281,7 +401,7 @@ layer {
 
 layer{
   name: "conv11"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv10"
   top: "conv11"
   convolution_param {
@@ -290,6 +410,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -304,7 +436,7 @@ layer {
 
 layer{
   name: "conv12"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv11"
   top: "conv12"
   convolution_param {
@@ -313,6 +445,18 @@ layer{
     pad: 0
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -327,7 +471,7 @@ layer {
 
 layer{
   name: "conv13"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv12"
   top: "conv13"
   convolution_param {
@@ -336,6 +480,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -361,7 +517,7 @@ layer {
 
 layer{
   name: "conv14"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "pool13"
   top: "conv14"
   convolution_param {
@@ -370,6 +526,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -384,7 +552,7 @@ layer {
 
 layer{
   name: "conv15"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv14"
   top: "conv15"
   convolution_param {
@@ -393,6 +561,18 @@ layer{
     pad: 0
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -408,7 +588,7 @@ layer {
 
 layer{
   name: "conv16"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv15"
   top: "conv16"
   convolution_param {
@@ -417,6 +597,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 2
+    fl: 6
   }
 }
 layer {
@@ -431,7 +623,7 @@ layer {
 
 layer{
   name: "conv17"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv16"
   top: "conv17"
   convolution_param {
@@ -440,6 +632,18 @@ layer{
     pad: 0
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 2
+    fl: 6
+  }
+  qcodeconfig {
+    il: 2
+    fl: 6
   }
 }
 layer {
@@ -455,7 +659,7 @@ layer {
 
 layer{
   name: "conv18"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv17"
   top: "conv18"
   convolution_param {
@@ -464,6 +668,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 2
+    fl: 6
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
   }
 }
 layer {
@@ -480,7 +696,7 @@ layer {
 
 layer{
   name: "conv19"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv18"
   top: "conv19"
   convolution_param {
@@ -489,6 +705,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 4
+    fl: 4
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -505,7 +733,7 @@ layer {
 
 layer{
   name: "conv20"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv19"
   top: "conv20"
   convolution_param {
@@ -514,6 +742,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 2
+    fl: 6
   }
 
 }
@@ -547,7 +787,7 @@ layer {
 
 layer{
   name: "conv21"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "concat2"
   top: "conv21"
   convolution_param {
@@ -556,6 +796,18 @@ layer{
     pad: 1
     stride: 1
     bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 2
+    fl: 6
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
   }
 }
 layer {
@@ -570,7 +822,7 @@ layer {
 
 layer {
   name: "conv22"
-  type: "Convolution"
+  type: "ConvolutionFloat"
   bottom: "conv21"
   top: "conv22"
   convolution_param {
@@ -578,6 +830,19 @@ layer {
     kernel_size: 1
     pad: 0
     stride: 1
+    bias_term: true
+  }
+  qcodeconfig {
+    il:1
+    fl:7
+  }
+  qcodeconfig {
+    il: 3
+    fl: 5
+  }
+  qcodeconfig {
+    il: 5
+    fl: 3
   }
 }
 # layer {
@@ -619,7 +884,7 @@ layer {
     # coords: 4
     boxes_of_each_grid: 5
     thres_nms: 0.45
-    thres_prob: 0.001                                                                                        
+    thres_prob: 0.001
     anchor_coords {pw: 1.08 ph: 1.19}
     anchor_coords {pw: 3.42 ph: 4.41}
     anchor_coords {pw: 6.63 ph: 11.38}
